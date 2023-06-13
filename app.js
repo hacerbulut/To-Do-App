@@ -45,4 +45,33 @@ window.addEventListener("keydown", (e)=>{
         localStorage.setItem('tasks',JSON.stringify(tasks))
         e.target.parentElement.remove()
     }
+    if(e.target.classList.contains("fa-check")){
+        tasks.map((task,index)=>{
+            tasks[index].flag = !tasks[index].flag
+        })
+    }
+    localStorage.setItem("tasks",JSON.stringify(tasks))
+
+
+//?üstünü çizme
+if(e.target.parentElement.classList.toggle("checked"))
+{}
+
+//?alternatif yol 
+// if(e.target.parentElement.classList.contains("checked")){
+//     e.target.parentElement.classList.remove("checked")
+// }else{
+//     e.target.parentElement.classList.add("checked")
+// }
+
+
  })
+
+
+ window.addEventListener("load",() =>{
+    tasks = JSON.parse(localStorage.getItem("tasks")) || []
+    tasks.forEach((task) =>{
+        domaYaz()
+    })
+ })
+ 

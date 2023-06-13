@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 body{
-    
+
     font-family: 'Roboto',sans-serif;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@ body{
     height: 100vh;
 }
 .container{
-    width: 70%;
+    width: 50%;
     > h1{
         color: white;
         font-size: 40px;
